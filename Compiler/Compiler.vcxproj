@@ -141,10 +141,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="my_assembler_20172674.c" />
+    <ClCompile Include="my_assembler.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="my_assembler_20172674.h" />
+    <ClInclude Include="my_assembler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

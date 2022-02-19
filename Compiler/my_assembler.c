@@ -1,8 +1,7 @@
 /*
- * 화일명 : my_assembler_20172674.c 
+ * 화일명 : my_assembler.c 
  * 설  명 : 이 프로그램은 SIC/XE 머신을 위한 간단한 Assembler 프로그램의 메인루틴으로,
  * 입력된 파일의 코드 중, 명령어에 해당하는 OPCODE를 찾아 출력한다.
- * 파일 내에서 사용되는 문자열 "20172674"에는 자신의 학번을 기입한다.
  */
 
 /*
@@ -17,8 +16,7 @@
 #include <fcntl.h>
 #include <ctype.h>
 
-// 파일명의 "20172674"은 자신의 학번으로 변경할 것.
-#include "my_assembler_20172674.h"
+#include "my_assembler.h"
 
 static void print_compile_error(int error_code, const uchar* str);
 static void print_compile_error_token(int error_code, const token* tok);
@@ -199,12 +197,12 @@ int main(int argc, uchar *argv[])
 		return -1;
 	}
 
-	//make_opcode_output("output_20172674");
+	//make_opcode_output("output");
 	//make_opcode_output(NULL);
 
-	make_symtab_output("symtab_20172674");
+	make_symtab_output("symtab.txt");
 	//make_symtab_output(NULL);
-	make_literaltab_output("literaltab_20172674");
+	make_literaltab_output("literaltab.txt");
 	//make_literaltab_output(NULL);
 
 	if (assem_pass2() < 0)
@@ -213,7 +211,7 @@ int main(int argc, uchar *argv[])
 		return -1;
 	}
 
-	make_objectcode_output("output_20172674");
+	make_objectcode_output("output.txt");
 	//make_objectcode_output(NULL);
 
 	return 0;
@@ -1398,7 +1396,7 @@ void make_symtab_output(uchar *file_name)
 void make_literaltab_output(uchar *file_name)
 {
 	FILE* file;
-	int i, j;
+	int i;
 
 	file = file_name == NULL ? stdout : fopen(file_name, "w");
 
