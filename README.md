@@ -6,3 +6,5 @@ Visual Studio 2019 환경에서 개발하였다.
 1. input.txt에 SIC/XE 코드를 작성
 2. 프로그램 실행
 3. 생성된 literaltab.txt, symtab.txt, output.txt 확인
+
+참고**만**하세요!!
